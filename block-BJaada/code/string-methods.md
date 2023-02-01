@@ -128,6 +128,7 @@ Example:
     brand.concat(' ', tagline)// 'Nike Just Do It'
     tagline.concat(brand)// 'Just Do ItNike'
     brand.concat(', ', tagline, '!')//'Nike, Just Do It!'
+    ```
   concat() method concatenates the string arguments to the calling string and returns a new string.
 
 
@@ -167,12 +168,163 @@ Example:
   includes() method performs a case-sensitive search to determine whether one string may be found within another string, returning true or false as appropriate.
 
 10. `indexOf`
-  - Paramter: 
+  - Paramter: Substring to search for. (optional) the index position to start searching from
+  - Return:the index of the first occurence of the subtring(number data type)
+  - Example:
+  ```js
+    let name = "I am learning javascript"
+    name.indexOf('pt');// 22
+
+    let title = "Are you Ready?";
+    title.indexOf('Ready?');// 8
+
+    let brand = "Nike";
+    let tagline = "Just Do It";
+    brand.indexOf('nike');// 0
+    tagline.indexOf('it');// -1
+    ```
+  indexOf() method, given one argument: a substring to search for, searches the entire calling string, and returns the index of the first occurrence of the specified substring.
+  
 11. `lastIndexOf`
+  - Parameter: Substring to search for. (optional) the index position to start searching from
+  - Return: The index of the last occurrence of searchString found (number data Type)
+  - Example: 
+   ```js
+    let name = "I am learning javascript"
+    name.lastIndexOf('pt');// 22
+
+    let title = "Are you Ready?";
+    title.lastIndexOf('e');// 9
+
+    let brand = "Nike";
+    let tagline = "Just Do It";
+    brand.lastIndexOf('nike');// 0
+    tagline.lastIndexOf('it');// -1
+    ```
 12. `padEnd`
+  - Parameter: The length of the resulting string once the current str has been padded. A string with which it has to be padded(optional)
+  - Return: A String of the specified targetLength with the padString applied at the end of the current str. (string data type)
+  - Example:
+  ```js
+    let name = "I am learning javascript"
+    name.padEnd('30', 't');// "I am learning javascripttttttt"
+
+    let title = "Are you Ready?";
+    title.padEnd(20, '?');// 'Are you Ready???????'
+
+    let brand = "Nike";
+    let tagline = "Just Do It";
+    brand.padEnd(6, 'Nike');// 'NikeNi'
+    tagline.padEnd(15, 'it');// 'Just Do Itititi'
+    ```
+  padEnd() method pads the current string with a given string (repeated, if needed) so that the resulting string reaches a given length. The padding is applied from the end of the current string.
+
+
 13. `padStart`
+  - Parameter: The length of the resulting string once the current str has been padded. A string with which it has to be padded(optional)
+  - Return: A String of the specified targetLength with the padString applied at the start of the current str. (string data type)
+  - Example:
+  ```js
+    let name = "I am learning javascript"
+    name.padStart('30', 'helo ');// 'helo hi am learning javascrpit'
+
+    let title = "Are you Ready?";
+    title.padStart(20, 'people ');// 'PeopleAre you Ready?'
+
+    let brand = "Nike";
+    let tagline = "Just Do It";
+    brand.padStart(6, 'Nike');// 'NikeNi'
+    tagline.padStart(15, 'it');// 'Just Do Itititi'
+    ```
+  - padStart() method pads the current string with another string (multiple times, if needed) until the resulting string reaches the              given length. The padding is applied from the start of the current string
+
 14. `repeat`
+  - Parameter- An integer between 0 and +Infinity, indicating the number of times to repeat the string.
+  - Return- A new string containing the specified number of copies of the given string. (string data type)
+  - Example- 
+  ```js
+    let name = "I am learning javascript"
+    name.repeat(2);// 'i am learning javascrpiti am learning javascrpit'
+
+    let title = "Are you Ready?";
+    title.repeat(3);// 'Are you Ready?Are you Ready?Are you Ready?'
+
+    let brand = "Nike";
+    let tagline = "Just Do It";
+    brand.repeat(6);// 'NikeNikeNike'
+    tagline.repeat(15);// 'Just Do ItJust Do ItJust Do ItJust Do ItJust Do ItJust Do ItJust Do ItJust Do ItJust Do ItJust Do ItJust Do ItJust Do ItJust Do ItJust Do ItJust Do It'
+    ```
+     repeat() method constructs and returns a new string which contains the specified number of copies of the string on which it was called, concatenated together.
+
 15. `replace`
+  - Parameter: Can be a string or an object with a Symbol.replace method 
+  - Return: A new string, with one, some, or all matches of the pattern replaced by the specified replacement. (string data type.)
+  - Example: 
+  ```js
+    let name = "I am learning javascript"
+    name.replace('javascript', 'python' );// 'i am learning python'
+
+    let title = "Are you Ready?";
+    title.replace('Are you Ready?', 'Ready, Steady, Go!'  );// 'Ready, Steady, Go!'
+
+    let brand = "Nike";
+    let tagline = "Just Do It";
+    brand.replace('Nike', 'Volkswagon');// 'Volkswagon'
+    tagline.replace('Just Do It', 'Das Auto');// 'Das Auto'
+    ```
+    The replace() method returns a new string with one, some, or all matches of a pattern replaced by a replacement
+
 16. `slice`
+  - Parameter: index start & Index End(optional) (Number data type)
+  - Return: A new string between the start and end index values.
+  - Example: 
+  ```js
+    let name = "I am learning javascript"
+    name.slice(2);// 'am learning python'
+
+    let title = "Are you Ready?";
+    title.slice(7);// 'Ready?'
+
+    let brand = "Nike";
+    let tagline = "Just Do It";
+    brand.slice(1,2);// 'i'
+    tagline.slice(5);// 'Do It'
+    ```
+    The slice() method extracts a section of a string and returns it as a new string, without modifying the original string.
+
 17. `split`
+  - Parameter: Seperator (string data type) is needed which determines forom where the orignal string will split.
+  - Return: An Array of strings, split at each point where the separator occurs in the given string.
+  - Example: 
+  ```js
+  let name = "I am learning javascript"
+    name.split(' ');// (4) ['i', 'am', 'learning', 'javascrpit']
+
+    let title = "Are you Ready?";
+    title.split('y');// (3) ['Are ', 'ou Read', '?']
+
+    let brand = "Nike";
+    let tagline = "Just Do It";
+    brand.split('i');// (2) ['N', 'ke']
+    tagline.split('Do');// (2) ['Just ', ' It']
+    ```
+  The split() method takes a pattern and divides a String into an ordered list of substrings by searching for the pattern, puts these substrings into an array, and returns the array.
+
 18. `substring`
+- Parameter: Index start & Index End.
+- Return: A new string containing the specified part of the given string.
+- Example :
+```js
+    let name = "I am learning javascript"
+    name.substring(2);// "am learning javascript"
+
+    let title = "Are you Ready?";
+    title.substring(5, 1);// 're y'
+
+    let brand = "Nike";
+    let tagline = "Just Do It";
+    brand.substring(6);// ' '
+    tagline.substring(5,10);// 'Do It'
+    ```
+substring() method returns the part of the string from the start index up to and excluding the end index, or to the end of the string if no end index is supplied
+
