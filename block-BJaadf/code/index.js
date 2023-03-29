@@ -1,10 +1,14 @@
 let fruits = ['Banana', 'Orange', 'Apple', 'Mango'];
 
 // Add a new element ('Papaya') into fruits array at end
+fruits.push('Papaya')
+
 
 // Remove the last element from fruits array
+fruits.pop()
 
 // Log the current length of fruits array
+console.log(fruits.length)
 
 // Remove the first element from fruits and log the value of fruits (use delete arr[0])
 
