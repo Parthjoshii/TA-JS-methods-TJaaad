@@ -12,12 +12,12 @@ console.log(indexOfIs)
 /*
 2. Find the character at the index indexOfIs (Problem 1) in quote.
 */
-console.log(quote.charAt(6));
+console.log(quote.charAt(indexOfIs));
 
 /*
 3. Log the message saying `The index of first is in quote is 7`
 */
-
+console.log(`The index of first is in quote is ${quote.charAt(indexOfIs)}`)
 /*
 4. Log the message for first 6 characters of quote like this.
   The character at index 0 is 'T'
@@ -27,12 +27,10 @@ console.log(quote.charAt(6));
   The character at index 4 is 'e'
   The character at index 5 is ' '
 */
-console.log(`The character at index 0 is ${quote.charAt(0)}`)
-console.log(`The character at index 1 is ${quote.charAt(1)}`)
-console.log(`The character at index 2 is ${quote.charAt(2)}`)
-console.log(`The character at index 3 is ${quote.charAt(3)}`)
-console.log(`The character at index 4 is ${quote.charAt(4)}`)
-console.log(`The character at index 5 is ${quote.charAt(5)}`)
+
+for (let i = 0; i < 6; i++) {
+  console.log(`The character at index ${i} is ${quote[i]}`)
+}
 /*
 5. Using the variable from , to and quote variable dispaly this message
   "Syrio Forel said There is only one thing we say to death: Not today to Arya Stark." (use concat method)
@@ -64,11 +62,14 @@ console.log(quoteSplitted)
 /*
 11. Change the word "today" in quoteSplitted to "tomorrow" and join all the words to form a sentance.
 */
-
+let index = quoteSplitted.indexOf("today")
+quoteSplitted[index] = "tomorrow";
+quoteSplitted.join(" ");
+console.log(quoteSplitted);
 /*
 12. Find the index of second "o" in quote. Use indexOf
 */
-console.log(quote.indexOf('o'))
+console.log(quote.indexOf('o', 7))
 /*
 13. Find the last index of letter "a" in quote.
 */
@@ -105,10 +106,10 @@ console.log(to.replace("Stark","Lannister"))
 /*
 20. Make the quote of length 30 and put ... at the end. (use slice)
 */
-console.log(quote.slice(0,30,"."))
+console.log(quote.slice(0,30) + "...")
 /*
 21. Find out does quote, from, to starts with "A"
 */
 console.log(quote.startsWith('A'))
 console.log(from.startsWith('A'))
-console.log(to.startsWith('A'))
+console.log(to .startsWith('A'))
