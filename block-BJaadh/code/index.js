@@ -11,18 +11,27 @@ Clone the array before using sort method: [...arr]
 */
 
 // - Find the index of `101` in numbers
+console.log(numbers.indexOf(101))
 
 // - Find the last index of `9` in numbers
+console.log(numbers.lastIndexOf(9))
 
 // - Convert value of strings array into a sentance like "This is a collection of words"
+console.log(strings.join(" "))
 
 // - Add two new words in the strings array "called" and "sentance"
+strings.push("called", "sentence")
+console.log(strings)
 
 // - Again convert the updated array (strings) into sentance like "This is a collection of words called sentance"
+console.log(strings.join(" "))
 
 // - Remove the first word in the array (strings)
+strings.shift ()
+console.log(strings)
 
 // - Find all the words that contain 'is' use string method 'includes'
+console.log(strings.map(strings.includes("is")))
 
 // - Find all the words that contain 'is' use string method 'indexOf'
 
