@@ -31,7 +31,7 @@ strings.shift ()
 console.log(strings)
 
 // - Find all the words that contain 'is' use string method 'includes'
-console.log(strings.map(strings.includes("is")))
+
 
 // - Find all the words that contain 'is' use string method 'indexOf'
 
@@ -40,6 +40,7 @@ console.log(strings.map(strings.includes("is")))
 // -  Sort Array from smallest to largest
 
 // - Remove the last word in strings
+console.log(strings.pop())
 
 // - Find largest number in numbers
 
