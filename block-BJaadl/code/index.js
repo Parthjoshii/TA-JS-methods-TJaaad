@@ -10,16 +10,38 @@ let words = [
 ];
 
 // - Write a function findLongestWord that takes an array of words and returns the longest word from the array. (Use above array "words" to test it). If there are 2 with the same length, it should return the first occurrence.
+function findLongestWord() {
+let longestWord = "";
+for (let i=0; i < words.length; i++) {
+  if(words[i].length > longestWord.length) {
+    longestWord = words[i]
+  } 
+  }
+  return longestWord
+}
+longestWord = findLongestWord(words)
+console.log(longestWord)
 
 // - Convert the above array "words" into an array of length of word instead of word.
+let wordLength = words.map(word => word.length)
+console.log(wordLength)
 
 // - Create a new array that only contains word with atleast one vowel.
+let wordsWithVowels = words.filter(word => /[aeiou]/i.test(word))
+console.log(wordsWithVowels)
 
 // - Find the index of the word "rhythm"
+console.log(words.indexOf("rhythm"))
 
 // - Create a new array that contians words not starting with vowel.
+let wordsNotStartingWithVowel = words.filter(word => /^[^aeiou]/i.test(word))
+console.log(wordsNotStartingWithVowel)
 
 // - Create a new array that contianse words not ending with vowel
+
+let wordsNotEndingWithVowel = words.filter(word => /[^aeiou]$/i.test(word))
+console.log(wordsNotEndingWithVowel)
+
 
 let numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
