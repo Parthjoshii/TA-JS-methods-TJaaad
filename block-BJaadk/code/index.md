@@ -4,14 +4,14 @@ For the given code below you have to draw the diagram of how these things are wo
 - using the `![](./img/imagename.png)` add images below each code snippet
 
 ```js
-let numbers = [100, 200, 33, 45, 65, 76, 51];
-function double(num) {
-  alert(num);
-}
-let doubleNum = numbers.forEach(double);
+  let numbers = [100, 200, 33, 45, 65, 76, 51];
+  function double(num) {
+    alert(num);
+  }
+  let doubleNum = numbers.forEach(double);
+  !
 ```
-![](./img/main.png)
-
+![](img/img%201.png)
 
 ```js
 let numbers = [100, 200, 33, 45, 65, 76, 51];
@@ -20,6 +20,7 @@ function double(num) {
 }
 let doubleNum = numbers.forEach(double);
 ```
+![](img/img%202.png)
 
 ```js
 let numbers = [100, 200, 33, 45, 65, 76, 51];
@@ -28,6 +29,7 @@ function double(num) {
 }
 let doubleNum = numbers.forEach(double);
 ```
+![](img/img%203.png)
 
 ```js
 let numbers = [100, 200, 33, 45, 65, 76, 51];
@@ -36,6 +38,7 @@ function double(num) {
 }
 let doubleNumbers = numbers.map(double);
 ```
+![](img/img%204.png)
 
 ```js
 let numbers = [100, 200, 33, 45, 65, 76, 51];
