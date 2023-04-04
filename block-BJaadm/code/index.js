@@ -13,21 +13,33 @@ let persons = [
   { name: 'Arya', grade: 14, sex: 'F' },
 ];
 
-// Create an array peopleName and store value of sex key from persons array
-
+// Create an array peopleName and store value of name key from persons array
+let peopleName = persons.map(persons => persons.name)
+console.log(peopleName)
 // Create an array peopleGrade and store the value of grade key from persons array
-
+let peopleGrade = persons.map(persons => persons.grade)
+console.log(peopleGrade)
 // Create an array peopleSex and store the value of sex key from persons array
-
+let peopleSex = persons.map(persons => persons.sex)
+console.log(peopleSex)
 // Log the filtered named of people in peopleName that starts with 'J' or 'P'
+let filteredNames = peopleName.filter(name => /^([JP])/i.test(name))
+filteredNames.forEach(name => console.log(name))
+
 
 // Log the length of filtered named of people in peopleName that starts with 'A' and 'C'
+let filteredNamesTwo = peopleName.filter(name => /^([AC])/i.test(name))
+filteredNames.forEach(name => console.log(name.length))
 
 // Log all the filtered male ('M') in persons array
 
 // Log all the filtered female ('F') in persons array
+let filteredMale = persons.filter(persons => persons.sex === 'M')
+filteredMale.forEach(persons => console.log(persons))
 
 // Log all the filtered female ('F') whose name starts with 'C' or 'J' in persons array
+let filteredFemale = persons.filter(persons => persons.sex === 'F' && /^([CJ])/i.test(persons.name))
+filteredFemale.forEach(persons => console.log(persons))
 
 // Log all the even numbers from peopleGrade array
 
