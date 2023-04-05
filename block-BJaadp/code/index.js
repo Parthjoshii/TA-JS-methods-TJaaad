@@ -16,6 +16,14 @@ let persons = [
 // NOTE: Use reduce method whereever you can to solve this exercise:
 
 // Find the average grade
+function average() {
+  let total = 0
+  for (let i = 0; i < persons.grade.length; i++) {
+    total += persons.grade.length[i]
+  }
+  return total / persons.grade.length;
+}
+console.log(average(persons.grade))
 
 // Find the average grade of male
 
