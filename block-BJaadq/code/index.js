@@ -1,7 +1,7 @@
 // NOTE: You can not use reduce methods to solve this exercise
 
 function countAllPeople() {
-  return .length
+  let people = got.houses.map(houses.people)
 }
 
 function peopleByHouses() {
